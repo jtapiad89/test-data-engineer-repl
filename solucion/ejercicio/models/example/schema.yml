@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: primera tabla
+    description: "tabla de categorias aereas"
+    columns:
+      - name: Code
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: Linea_Aerea

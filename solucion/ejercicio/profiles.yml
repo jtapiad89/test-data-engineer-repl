@@ -1,0 +1,27 @@
+DeaAnalytics:
+  outputs:
+    dev:
+      dataset: DeaAnalytics
+      project: DeaAnalyticsGoogleId
+      location: us-east4
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      method: oauth
+      priority: interactive
+      threads: 1
+      type: bigquery
+  target: dev
+
+
+sqlSource:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server' # (The ODBC Driver installed on your system)
+      server: hostname or IP of your server
+      port: 1433
+      database: database
+      schema: schema_name
+      user: username
+      password: password
